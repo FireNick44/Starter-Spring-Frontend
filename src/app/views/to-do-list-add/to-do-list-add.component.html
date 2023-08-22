@@ -1,0 +1,14 @@
+<div>
+  <h2>Add New ToDo List</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="newTodo.name" required>
+    </div>
+    <div>
+      <label for="imageCoverUrl">Image Cover URL</label>
+      <input type="text" id="imageCoverUrl" name="imageCoverUrl" [(ngModel)]="newTodo.imageCoverUrl" required>
+    </div>
+    <button type="submit">Add ToDo List</button>
+  </form>
+</div>
