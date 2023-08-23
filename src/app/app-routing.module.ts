@@ -16,16 +16,21 @@ const routes: Routes = [
     path: "todo",
     title: "ToDos"
   },
+  // {
+  //   component: ToDoListUpdateComponent,
+  //   path: "todo/edit",
+  //   title: "Edit",
+  // },
   {
     component: ToDoListUpdateComponent,
-    path: "todo/edit",
-    title: "Edit",
+    path: "edit/list/:id",
+    title: "Edit with Id",
   },
   {
     component: ToDoListAddComponent,
     path: "todo/add",
     title: "Create",
-  }
+  },
 ];
 
 @NgModule({

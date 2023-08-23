@@ -1,1 +1,20 @@
-<p>to-do-list works!</p>
+<h2>ToDo Lists:</h2>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Image</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let toDoList of toDoLists">
+    <td>{{ toDoList.name }}</td>
+    <td><img [src]="toDoList.imageCoverUrl" alt="ToDoList Image" height="50"></td>
+    <td>
+      <a [routerLink]="['/edit/list/', toDoList.id]">Edit</a> |
+      <a (click)="deleteToDoList(toDoList.id)">Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
